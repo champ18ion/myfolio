@@ -23,33 +23,37 @@ const projects = (await getCollection('work'))
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+const baseUrl ="https://certificate.codingninjas.com/view/"
+const certificates = [{id:'adf422c045cdd845',no:'23'},{id:'b30aa888c4e22fb4',no:'24'},{id:'8439b6336a4ed2f2',no:'25'},{id:'8c8ff40e0c88ab4a',no:'26'},{id:'77fc1149372a0d47',no:'27'}]
 ---
+
 
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hey there, I'm Champ18ion"
+					tagline="I am a Creative Developer who is currently based in Ranchi, India."
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
+						<Pill><Icon icon="paint-brush" size="1.33em" /> Designer</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="champ18ion smiling"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/SHA_20221113_151402468_8.4.400.PORTRAIT.jpg"
 				/>
 			</header>
 
 			<Skills />
+			
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
@@ -81,9 +85,9 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Certificates</h3>
 					<p>
-						I have been fortunate enough to recieve praise for my work in several publications. Take
+						I have been fortunate enough to recieve some certificates for my work in several publications. Take
 						a look below to learn more.
 					</p>
 				</header>
@@ -91,9 +95,10 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							certificates.map((brand) => (
 								<li class="mention-card">
-									<p>{brand}</p>
+									
+								<a href={`https://certificate.codingninjas.com/view/${brand.id}`} target="_blank"><img src={`public/assets/Screenshot (${brand.no}).png`} alt="certificate" srcset=""></a>
 								</li>
 							))
 						}

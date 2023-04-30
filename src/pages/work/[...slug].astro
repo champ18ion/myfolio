@@ -38,6 +38,7 @@ const { Content } = await entry.render();
 							<div class="tags">
 								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
 							</div>
+							<Pill><a class="live" target="blank" href={`http://${entry.data.link}`}>see live</a></Pill>
 							<p class="description">{entry.data.description}</p>
 						</div>
 					</Hero>
@@ -132,7 +133,10 @@ const { Content } = await entry.render();
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
 	}
-
+    .live{
+		color: aliceblue;
+		text-decoration: none
+	}
 	@media (min-width: 50em) {
 		.back-link {
 			display: block;

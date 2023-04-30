@@ -1,11 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+
+const steps = [
+    { title: "High School", percent: 20 },
+    { title: "College", percent: 50 },
+    { title: "Graduate School", percent: 80 },
+  ];
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | champ18ion " description="About champ18ion ">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -15,7 +20,7 @@ import Hero from '../components/Hero.astro';
 				<img
 					width="1553"
 					height="873"
-					src="/assets/at-work.jpg"
+					src="/assets/IMG_20220525_094358.jpg"
 					alt="Jeanine White at work with a colleague"
 				/>
 			</Hero>
@@ -24,37 +29,71 @@ import Hero from '../components/Hero.astro';
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						"Hey there! I'm Kunal Kumar , a web developer with a lifelong passion for tech and gadgets. 
+						Ever since I was a kid, I was fascinated by the endless possibilities of coding and web development. 
+						I'm a self-taught developer who turned my passion into a full-blown career.
+						With a solid foundation in basic HTML CSS and JS, I've honed my skills in Fronend development using tools like React, NextJs, Bootstrap, tailwind, firebase,.
+						I've overcome coding challenges with sheer determination and an unwavering love for what I do.
+						 My journey as a web developer has been a thrilling adventure, and I'm always eager to take on new projects and push the boundaries of what's possible online.
+						Let's bring your web ideas to life with some cutting-edge code and a dash of creativity!"
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						
 					</p>
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						As a professional web developer, I possess expertise in both front-end and back-end technologies, including NodeJS, Express, and MongoDB. This allows me to create visually appealing and fully functional web applications that deliver exceptional user experiences. With my diverse skill set, I am well-equipped to tackle complex challenges and create high-quality web solutions that meet the needs of modern businesses and users alike.
 					</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<div class="education-entry">
+						<h3>University of XYZ</h3>
+						<p class="education-date">2010-2014</p>
+						<p class="education-degree">Bachelor of Science in Computer Science</p>
+						<p class="education-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, tortor ac hendrerit commodo, sapien tellus condimentum massa, vel congue justo eros id libero.</p>
+					  </div>
+					  <div class="education-entry">
+						<h3>ABC Technical School</h3>
+						<p class="education-date">2008-2010</p>
+						<p class="education-degree">Associate of Applied Science in Web Development</p>
+						<p class="education-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, tortor ac hendrerit commodo, sapien tellus condimentum massa, vel congue justo eros id libero.</p>
+					  </div>
+ 					<p>Corporis voluptates tenetur laudantium.</p>
 				</div>
 			</section>
-			<section>
+			<section class="skills">
 				<h2 class="section-title">Skills</h2>
+				<ul>
+				  <li>
+					<h3>Web Development</h3>
+					<div class="bar-container">
+					  <div class="bar" style="width: 90%"></div>
+					</div>
+				  </li>
+				  <li>
+					<h3>Graphic Design</h3>
+					<div class="bar-container">
+					  <div class="bar" style="width: 75%"></div>
+					</div>
+				  </li>
+				  <li>
+					<h3>Project Management</h3>
+					<div class="bar-container">
+					  <div class="bar" style="width: 80%"></div>
+					</div>
+				  </li>
+				</ul>
+			  </section>
+			<section>
+				<h2 class="section-title">Resume</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<a href="/assets/my-res.pdf" target="_blank">View PDF</a>
 				</div>
+				
 			</section>
+			
 		</main>
 
 		<ContactCTA />
@@ -101,6 +140,72 @@ import Hero from '../components/Hero.astro';
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
 	}
+	.education {
+    margin-top: 2rem;
+  }
+
+  .education-entry {
+    margin-bottom: 1.5rem;
+  }
+
+  .education-entry h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .education-date {
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+
+  .education-degree {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .education-description {
+    margin-bottom: 1rem;
+  }
+  .skills {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .bar {
+    height: 20px;
+    background-color: #0077FF;
+    border-radius: 50px;
+    transition: width 0.5s ease-in-out;
+  }
+
 
 	@media (min-width: 50em) {
 		.about {
