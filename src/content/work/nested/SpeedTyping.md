@@ -6,9 +6,9 @@ img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
    A speed typing test simulator 
 tags:
-  - Nodejs
-  - GoogleOauth
-  - ejs
+  - React
+  - ReactHooks
+  - customHooks
 
 link: react-332hyh.stackblitz.io
 ---
